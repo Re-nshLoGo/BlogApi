@@ -36,3 +36,32 @@ You will also need a MySQL server running on your local machine or a remote serv
        spring.datasource.username=<database-username>
        spring.datasource.password=<database-password>
 * Build and run the application.
+## There are Four models -
+ * Users
+ * Post
+ * Comment
+ * Category
+## Endpoints
+* User Controller has -
+    * POST - `http://localhost:9000/api/users/add-user`
+    * GET - `http://localhost:9000/api/users/`
+    * PUT - `http://localhost:9000/api/users/update/{userId}`
+    * DELETE - ` http://localhost:9000/api/users/delete/{userId}`
+* Post Controller has -
+    * POST - `http://localhost:9000/post/save?userid="userId"&categoryid="categoryId"`
+    * POST - `http://localhost:9000/post/upload-image/{postId}`
+    * Delete - `http://localhost:9000/post/delete/{postId}`
+    * GET - `http://localhost:9000/post/post-by-category/{categoryId}`
+    * GET - `http://localhost:9000/post/post-by-user/{userId}`
+    * GET - `http://localhost:9000/post/get-all?pageno="pageNo"&pagesize="pageSize"&sortby="sortBy"`
+    * GET - `http://localhost:9000/post/search/by-title/{keyword}`
+* Category Controller has -
+    * POST - `http://localhost:9000/category/save`
+    * GET - `http://localhost:9000/category/?id="categoryId"`
+    * PUT - `http://localhost:9000/category/update/{categoryId}`
+    * DELETE -`http://localhost:9000/category/delete/{categoryId}`
+* Comment Controller has -
+    * POST - `http://localhost:9000/api/comment/add?userId="userID"&postId="postId"`
+    * DELETE - `http://localhost:9000/api/comment/delete?commentId="commentId"&userId="userId"&postId="postId"`
+
+
