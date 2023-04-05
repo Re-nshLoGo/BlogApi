@@ -15,8 +15,10 @@ Pagination has also been added to get all posts.
 * Configuration Files - 
 
     * src/resources/application.properties - main configuration file. Here it is possible to change the port number.
-    it has the properties for Database connection and for uploading file.
-
+    it has the properties for Database connection and for uploading file like:
+    
+<h1 align="left"><img width=700 height=300 alt="EER" src="https://user-images.githubusercontent.com/117101699/230089571-fd3074b6-5093-470c-83f9-4ece58fd3d96.png"/></h1>
+   
 ### Features :-
       * Create, Read, Update, Delete (CRUD) operations for Posts and Users.
       * Post categorization
@@ -41,27 +43,34 @@ You will also need a MySQL server running on your local machine or a remote serv
  * Post
  * Comment
  * Category
+## Mapping between Models -
+<h1 align="left"><img width=700 height=300 alt="EER" src="https://user-images.githubusercontent.com/117101699/230090205-f72cfc4c-b184-4155-a50f-91ab301837a3.png"/></h1>
+
 ## Endpoints
 * User Controller has -
-    * POST - `http://localhost:9000/api/users/add-user`
-    * GET - `http://localhost:9000/api/users/`
-    * PUT - `http://localhost:9000/api/users/update/{userId}`
-    * DELETE - ` http://localhost:9000/api/users/delete/{userId}`
+
+<h1 align="left"><img width=700 height=300 alt="user" src="https://user-images.githubusercontent.com/117101699/230092083-0b3013d6-0d04-4321-9ced-2b701f64673f.png"/></h1>
+  
 * Post Controller has -
-    * POST - `http://localhost:9000/post/save?userid="userId"&categoryid="categoryId"`
-    * POST - `http://localhost:9000/post/upload-image/{postId}`
-    * Delete - `http://localhost:9000/post/delete/{postId}`
-    * GET - `http://localhost:9000/post/post-by-category/{categoryId}`
-    * GET - `http://localhost:9000/post/post-by-user/{userId}`
-    * GET - `http://localhost:9000/post/get-all?pageno="pageNo"&pagesize="pageSize"&sortby="sortBy"`
-    * GET - `http://localhost:9000/post/search/by-title/{keyword}`
+ 
+<h1 align="left"><img width=700 height=500 alt="post" src="https://user-images.githubusercontent.com/117101699/230092832-7420595b-8f09-490e-9576-9c3f9bcef936.png"/></h1>
+  
 * Category Controller has -
-    * POST - `http://localhost:9000/category/save`
-    * GET - `http://localhost:9000/category/?id="categoryId"`
-    * PUT - `http://localhost:9000/category/update/{categoryId}`
-    * DELETE -`http://localhost:9000/category/delete/{categoryId}`
+  
+<h1 align="left"><img width=700 height=300 alt="cate" src="https://user-images.githubusercontent.com/117101699/230093142-3a577c6a-4278-4bb6-a7b2-603035c5bd18.png"/></h1>
+ 
 * Comment Controller has -
-    * POST - `http://localhost:9000/api/comment/add?userId="userID"&postId="postId"`
-    * DELETE - `http://localhost:9000/api/comment/delete?commentId="commentId"&userId="userId"&postId="postId"`
+
+<h1 align="left"><img width=700 height=300 alt="comment" src="https://user-images.githubusercontent.com/117101699/230093314-404e46b9-763f-4948-a06c-8d44082c412f.png"/></h1>
+
+## Output like - 
+  * Get All posts -
+<h1 align="left"><img width=700 height=300 alt="allpost" src="https://user-images.githubusercontent.com/117101699/230096905-ef8a9847-7e39-4c52-bfce-1b406f212f68.png"/></h1>
+
+  * Get User by userId - 
+  
+<h1 align="left"><img width=700 height=300 alt="allpost" src="https://user-images.githubusercontent.com/117101699/230097430-02732950-3529-4dbf-83fe-454d66fb648e.png"/></h1>
+  
+
 
 
