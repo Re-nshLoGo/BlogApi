@@ -6,7 +6,6 @@ import com.reena.BlogApi.exception.ResourceNotFoundException;
 import com.reena.BlogApi.model.Category;
 import com.reena.BlogApi.model.Post;
 import com.reena.BlogApi.model.Users;
-import com.reena.BlogApi.payloads.ImageResponse;
 import com.reena.BlogApi.payloads.PostDto;
 import com.reena.BlogApi.payloads.PostResponse;
 import org.modelmapper.ModelMapper;

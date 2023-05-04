@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.multipart.MultipartException;
 
 import java.io.FileNotFoundException;
+import java.nio.file.FileAlreadyExistsException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -65,4 +66,12 @@ public class GlobalExceptionHandler {
         String message = e.getMessage();
         return new ResponseEntity<>(message,HttpStatus.INTERNAL_SERVER_ERROR);
     }
+    @ExceptionHandler(FileAlreadyExistsException.class)
+    public ResponseEntity<Map<String,String>> fileAlreadyExistsException(FileAlreadyExistsException ex){
+        String msg = ex.getLocalizedMessage();
+        Map<String,String> hm = new HashMap<>();
+        hm.put("File already exist, path ",msg);
+        return new ResponseEntity<>(hm,HttpStatus.CONFLICT);
+    }
+
 }
